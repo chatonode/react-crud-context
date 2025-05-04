@@ -1,6 +1,6 @@
 {
   "name": "react-crud-context",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React library that helps creating context providers with state-managed CRUD operation hooks for APIs",
   "author": "Chato Node <chatonode@gmail.com>",
   "license": "MIT",
