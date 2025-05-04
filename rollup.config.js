@@ -17,13 +17,14 @@ export default [
   // — outputs both ESM and CJS bundles with sourcemaps
   {
     input: 'src/index.ts',                                     // Entry point
-    external: ['react', 'react-dom'],                          // Peer deps: do not bundle React
+    external: ['react', 'react-dom', 'react/jsx-runtime'],     // Peer deps: do not bundle React
     plugins: [
       resolve(),                                               // so Rollup can find deps
       commonjs(),                                              // so Rollup can convert CJS to ESM
       esbuild({
         target: 'es2017',                                      // modern JS target
-        jsx: 'transform',                                      // handle JSX in TSX files
+        jsx: 'automatic',                                      // handle JSX in TSX files
+        jsxImportSource: 'react',                              // explicitly set import source
         minify: process.env.NODE_ENV === 'production',         // optional: minify in prod
       }),
     ],

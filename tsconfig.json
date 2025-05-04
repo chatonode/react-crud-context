@@ -7,7 +7,8 @@
     "module": "ESNext",                   // Use native ES modules in build step
     "moduleResolution": "node",           // Resolve modules like Node.js
     "jsx": "react-jsx",                   // Enable the new React JSX transform
-    "strict": true,                         // Enable all strict type-checking options
+    "jsxImportSource": "react",           // 👈 Add explicit import source
+    "strict": true,                       // Enable all strict type-checking options
     
     // Allow default imports from modules with no default export
     "esModuleInterop": true,
