@@ -1,0 +1,35 @@
+{
+  // tsconfig.json
+  // ---------------------------------
+  // TypeScript compiler configuration for src and declaration emit
+  "compilerOptions": {
+    "target": "ES2017",                   // Compile to ES2017 for broad compatibility
+    "module": "ESNext",                   // Use native ES modules in build step
+    "moduleResolution": "node",           // Resolve modules like Node.js
+    "jsx": "react-jsx",                   // Enable the new React JSX transform
+    "strict": true,                         // Enable all strict type-checking options
+    
+    // Allow default imports from modules with no default export
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    
+    // Emit only type declarations in dist folder
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
+    
+    // Source maps for easier debugging (optional)
+    "sourceMap": true,
+
+    // Path mapping
+    "baseUrl": ".",
+    "paths": {
+      "react-crud-context": ["./src/index.ts"],
+      "react-crud-context/service": ["./src/service/index.ts"]
+    }
+  },
+  
+  // Define root files and include patterns
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.test.tsx"]
+}
