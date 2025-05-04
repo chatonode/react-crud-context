@@ -129,7 +129,7 @@ For full-stack type contracts, use the `CrudService` type:
 
 ```ts
 // services/userService.ts
-import type { CrudService } from 'react-crud-context/service';
+import type { CrudService } from 'react-crud-context';
 
 type User = { id: string; name: string };
 

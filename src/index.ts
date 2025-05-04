@@ -4,6 +4,7 @@
 
 // Re-export the main context creator function
 export { createCrudContext } from './createCrudContext';
+export type { CrudService } from './service';
 
 // Export any other utility types that might be needed by consumers
 // export type {
